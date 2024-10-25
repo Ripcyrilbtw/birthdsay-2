@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>happy birthday appa</title>
+
+    <style>
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 30px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .btn {
+            background-color: #FF7043;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 50px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .feature-cards {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            width: 30%;
+            padding: 20px;
+            background-color: #e8f5e9;
+            border-radius: 10px;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 50px;
+            background-color: #e3f2fd;
+            text-align: center;
+        }
+
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+
+        .carousel img {
+            width: 800px;
+            margin-right: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 50px;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+
+        .contact input, .contact textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1 class="logo"><a href="#">InsaneSite</a></h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to your Website</h1>
+            <p>Explore everthing about you.</p>
+            <a href="#features" class="btn">Discover More</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Amazing Features</h2>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <h3>awhat amma love about you</h3>
+                <p> you are a good husband , you teach many to me and very patiently thank you vasanth </p>
+            </div>
+            <div class="feature-card">
+                <h3> you are honest  </h3>
+                <p>happy birthday appp im a god gifted child because you would always support me when im in trouble or when amma is fighting .</p>
+            </div>
+            <div class="feature-card">
+                <h3>about your computer skills </h3>
+                <p>everything about your computer skills is very much exellent nobody can beat even me happy birthday!.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2>Image Gallery</h2>
+        <div class="carousel">
+            <img src="appa 1.png" alt="Appa 1">
+            <img src="appa 2.png" alt="Appa 2">
+            <img src="appa 3.png" alt="Appa 3">
+            <img src="appa 4.png" alt="Appa 4">
+        </div>
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 InsaneSite. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Carousel Auto Scroll
+        $(document).ready(function () {
+            setInterval(function () {
+                const firstImage = $('.carousel img').first();
+                firstImage.fadeOut(1000, function () {
+                    $(this).appendTo('.carousel').fadeIn();
+                });
+            }, 3000);
+        });
+    </script>
+
+</body>
+</html>
